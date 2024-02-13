@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\AddYoutuber;
+use App\Livewire\EditYoutuber;
 use App\Livewire\ViewYoutuber;
 use App\Livewire\Youtubers;
 use App\Models\Youtuber;
@@ -23,3 +24,5 @@ Route::get('/', function () {
 Route::get('/youtubers/store',AddYoutuber::class);
 Route::get('/youtubers',Youtubers::class);
 Route::get('/youtubers/{youtuber}',ViewYoutuber::class);
+
+Route::get('/youtubers/edit/{youtuber}',EditYoutuber::class);

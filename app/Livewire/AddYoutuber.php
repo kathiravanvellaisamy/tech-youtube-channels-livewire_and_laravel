@@ -31,7 +31,8 @@ class AddYoutuber extends Component
         ]);
 
         Youtuber::create($validated);
-        $this->reset();
+        session()->flash('success','Data has been creeated...');
+        return $this->redirect('/youtubers',navigate:true);
 
     }
 }

@@ -8,6 +8,7 @@
         </div>
     </div>
     <div class="col-md-12">
+        <livewire:flash-message />
         <div class="table-responsive">
             <table class="table table-dark table-striped">
                 <thead>
@@ -31,7 +32,8 @@
                             <td>{{ $youtuber->owner_name }}</td>
                             <td>{{ $youtuber->country }}</td>
                             <td class="d-flex gap-3">
-                                <a href="" class="btn btn-primary">Edit</a>
+                                <a wire:navigate href="/youtubers/edit/{{ $youtuber->id }}"
+                                    class="btn btn-primary">Edit</a>
                                 <a href="" class="btn btn-secondary">Delete</a>
                             </td>
                         </tr>
