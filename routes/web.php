@@ -1,6 +1,8 @@
 <?php
 
 use App\Livewire\AddYoutuber;
+use App\Livewire\Youtubers;
+use App\Models\Youtuber;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +20,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/youtubers/store',AddYoutuber::class);
+Route::get('/youtubers',Youtubers::class);
