@@ -3,7 +3,7 @@
         <div class="d-flex justify-content-between align-items-center">
             <h1>Dashboard</h1>
             <div>
-                <a href="/youtubers/store" class="btn btn-primary">Add new</a>
+                <a wire:navigate href="/youtubers/store" class="btn btn-primary">Add new</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,11 @@
                     @foreach ($youtubers as $youtuber)
                         <tr>
                             <th scope="row">{{ $youtuber->id }}</th>
-                            <td>{{ $youtuber->youtube_name }}</td>
+                            <td>
+                                <a wire:navigate class="text-decoration-none text-info font-weight-bold"
+                                    href="/youtubers/{{ $youtuber->id }}">
+                                    {{ $youtuber->youtube_name }}</a>
+                            </td>
                             <td>{{ $youtuber->owner_name }}</td>
                             <td>{{ $youtuber->country }}</td>
                             <td class="d-flex gap-3">
