@@ -3,6 +3,7 @@
 use App\Livewire\AddYoutuber;
 use App\Livewire\EditYoutuber;
 use App\Livewire\HomePage;
+use App\Livewire\Register;
 use App\Livewire\ViewYoutuber;
 use App\Livewire\Youtubers;
 use App\Models\Youtuber;
@@ -20,8 +21,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomePage::class);
+
+
+Route::get('/register',Register::class);
+
+Route::middleware('auth')->group(function(){
 Route::get('/youtubers/store',AddYoutuber::class);
 Route::get('/youtubers',Youtubers::class);
 Route::get('/youtubers/{youtuber}',ViewYoutuber::class);
 
 Route::get('/youtubers/edit/{youtuber}',EditYoutuber::class);
+});
