@@ -1,8 +1,20 @@
 <div class="row">
-    <div class="col-md-12 mb-4">
+    <div class="col-md-12 mb-2">
         <div class="d-flex justify-content-between align-items-center">
             <h1>Dashboard</h1>
+        </div>
+    </div>
+    <div class="col-md-8 mx-auto mt-1 mb-3">
 
+        <div class="input-group">
+            <input class="form-control border-end-0 border-2 rounded-pill" wire:model.live.debounce.150ms="search"
+                type="search" placeholder="Search Youtubers" id="example-search-input">
+            {{-- <span class="input-group-append">
+                <button class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5"
+                    type="button">
+                    <i class="bi bi-search"></i>
+                </button>
+            </span> --}}
         </div>
     </div>
     <div class="col-md-12">
