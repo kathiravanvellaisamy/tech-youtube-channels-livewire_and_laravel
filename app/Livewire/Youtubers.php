@@ -16,4 +16,10 @@ class Youtubers extends Component
     {
         return view('livewire.youtubers');
     }
+
+    public function deleteYoutuber(Youtuber $youtuber){
+        $youtuber->delete();
+        session()->flash('success','Data has been deleted...');
+        return $this->redirect('/youtubers',navigate:true);
+    }
 }

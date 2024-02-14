@@ -34,7 +34,8 @@
                             <td class="d-flex gap-3">
                                 <a wire:navigate href="/youtubers/edit/{{ $youtuber->id }}"
                                     class="btn btn-primary">Edit</a>
-                                <a href="" class="btn btn-secondary">Delete</a>
+                                <a type="button" wire:click="deleteYoutuber({{ $youtuber->id }})"
+                                    class="btn btn-secondary">Delete</a>
                             </td>
                         </tr>
                     @endforeach
