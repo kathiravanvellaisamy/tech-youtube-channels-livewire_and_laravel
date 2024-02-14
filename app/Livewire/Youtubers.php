@@ -4,10 +4,13 @@ namespace App\Livewire;
 
 use App\Models\Youtuber;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Youtubers extends Component
 {
-    public $youtubers = [];
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
+    // public $youtubers = [];
     public $search ='';
     // public function mount(){
     //     $this->youtubers = Youtuber::all();
@@ -15,11 +18,13 @@ class Youtubers extends Component
     public function render()
     {
         if(! $this->search){
-            $this->youtubers = Youtuber::all();
+            $youtubers = Youtuber::paginate(7);
         }else{
-            $this->youtubers = Youtuber::where('owner_name','like','%'.$this->search.'%')->get();
+            $youtubers = Youtuber::where('owner_name','like','%'.$this->search.'%')->paginate(7);
         }
-        return view('livewire.youtubers');
+        return view('livewire.youtubers',[
+            'youtubers' => $youtubers,
+        ]);
     }
 
     public function deleteYoutuber(Youtuber $youtuber){

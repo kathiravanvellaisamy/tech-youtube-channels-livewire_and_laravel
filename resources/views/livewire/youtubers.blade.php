@@ -52,6 +52,11 @@
 
                 </tbody>
             </table>
+
         </div>
+        <div>
+            {{ $youtubers->links() }}
+        </div>
+
     </div>
 </div>
