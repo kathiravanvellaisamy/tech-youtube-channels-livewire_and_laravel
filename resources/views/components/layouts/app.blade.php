@@ -25,18 +25,18 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                        <a wire:navigate class="nav-link active fs-5" aria-current="page" href="/">Home</a>
+                        <a wire:navigate class="nav-link active fs-6" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a wire:navigate class="nav-link active fs-5" aria-current="page"
+                        <a wire:navigate class="nav-link active fs-6" aria-current="page"
                             href="/youtubers">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a wire:navigate class="nav-link active fs-5" aria-current="page" href="/youtubers/store">Add
+                        <a wire:navigate class="nav-link active fs-6" aria-current="page" href="/youtubers/store">Add
                             New</a>
                     </li>
                     <li class="nav-item">
-                        <a wire:navigate class="nav-link active fs-5" aria-current="page" href="/logout">Logout</a>
+                        <a wire:navigate class="nav-link active fs-6" aria-current="page" href="/logout">Logout</a>
                     </li>
                 </ul>
                 <form class="d-flex">
